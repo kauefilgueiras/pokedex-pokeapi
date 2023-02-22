@@ -1,0 +1,128 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: aliceblue;
+}
+
+.row {
+  display: flex;
+  margin-top: 5%;
+  width: 100%;
+}
+
+
+.card-container {
+  display: flex;
+  width: 1000%;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  width: 240px;
+  height: 350px;
+  transition: all 0.3s ease-out;
+  border: 4px solid rgba(165, 165, 48, 0.571);
+  perspective: 1000px;
+  position: relative;
+
+}
+
+
+
+#btn-data {
+  background-color: #027504;
+  padding: 5px;
+  font-family: monospace;
+  color: white;
+  display: flex;
+
+}
+
+#btn-data:hover {
+  background-color: #059907;
+  font-weight: bold;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 7%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card img{
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 4px rgba(50, 50, 50, 0.22);
+  
+}
+
+.card h2 {
+  box-shadow: 1px 1px 1px 4px rgba(50, 50, 50, 0.22);
+  border-radius: 5px;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace ;
+} 
+
+.back-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6fbd08;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+}
+
+.back-card p {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  margin-left: 3%;
+  margin-top: 14%;
+  justify-content: center;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace ; 
+  font-size: 16px;
+  font-weight: bold;
+  white-space: pre-line;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 2%;
+  position: relative;
+}
+
+.card.hover {
+  transform: rotateY(360deg);
+}
+
+.card.hover .back-card {
+  z-index: 1;
+  transform: rotateY(0deg);
+ 
+}
